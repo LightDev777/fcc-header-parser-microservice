@@ -12,8 +12,10 @@ app.get('/whoami', function(req, res) {
     "software" : os
   };
 
+  //write and end the response
   res.write(JSON.stringify(data));
   res.end();
 });
 
+// listen to port thrown by heroku or default to 5000
 app.listen(process.env.PORT || 5000);
