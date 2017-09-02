@@ -4,3 +4,5 @@
 
 <h2>To use, simply visit this link:</h2>
 <p><code></code></p>
+
+<p>Coded by Charmie Q.</p>
