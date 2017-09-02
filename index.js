@@ -7,14 +7,14 @@ app.get('/whoami', function(req, res) {
   var lang = req.headers["accept-language"].split(",")[0]; // get specific language info
 
   var data = {
-    "ipaddress": req.ip,
+    "ipaddress": req.headers['x-forwarded-for'],
     "language" : lang,
     "software" : os
   };
 
   //write and end the response
   //res.send();
-  console.log(req.headers);
+  //console.log(req.headers.connection.remoteAddress);
   res.end(JSON.stringify(data));
 
 });
