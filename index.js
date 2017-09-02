@@ -14,7 +14,9 @@ app.get('/whoami', function(req, res) {
 
   //write and end the response
   //res.send();
+  console.log(req.headers);
   res.end(JSON.stringify(data));
+
 });
 
 // listen to port thrown by heroku or default to 5000
